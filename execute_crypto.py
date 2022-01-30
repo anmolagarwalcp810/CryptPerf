@@ -1,6 +1,12 @@
 # Write your script here
 import os
 
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable,"-m","pip","install","cryptography==36.0.1"])
+# subprocess.check_call([sys.executable,"-m","pip3","install","cryptography==36.0.1"])
+
 import cryptography.exceptions
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
