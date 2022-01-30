@@ -11,7 +11,7 @@ from cryptography.hazmat.primitives import hashes, cmac, hmac, serialization, pa
 RSA_ENCRYPT_SIZE = 128    # size is not 256 because of overhead, maximum allowed size was 190, but kept 128
 RSA_DECRYPT_SIZE = 256
 
-# print(RSA_SIZE)
+# # print(RSA_SIZE)
 
 class ExecuteCrypto(object): # Do not change this
     def generate_keys(self):
@@ -43,20 +43,20 @@ class ExecuteCrypto(object): # Do not change this
         public_key_sender_ecc = public_key_sender_ecc_.public_bytes(encoding=serialization.Encoding.PEM,
                                 format=serialization.PublicFormat.SubjectPublicKeyInfo)
 
-        print("Symmetric Key") # Do not change this
-        print(symmetric_key) # Do not change this
-        print("Sender's RSA Public Key") # Do not change this
-        print(public_key_sender_rsa) # Do not change this
-        print("Sender's RSA Private Key") # Do not change this
-        print(private_key_sender_rsa) # Do not change this
-        print("Receiver's RSA Public Key") # Do not change this
-        print(public_key_receiver_rsa) # Do not change this
-        print("Receiver's RSA Private Key") # Do not change this
-        print(private_key_receiver_rsa) # Do not change this
-        print("Sender's ECC Public Key") # Do not change this
-        print(public_key_sender_ecc) # Do not change this
-        print("Sender's ECC Private Key") # Do not change this
-        print(private_key_sender_ecc) # Do not change this
+        # print("Symmetric Key") # Do not change this
+        # print(symmetric_key) # Do not change this
+        # print("Sender's RSA Public Key") # Do not change this
+        # print(public_key_sender_rsa) # Do not change this
+        # print("Sender's RSA Private Key") # Do not change this
+        # print(private_key_sender_rsa) # Do not change this
+        # print("Receiver's RSA Public Key") # Do not change this
+        # print(public_key_receiver_rsa) # Do not change this
+        # print("Receiver's RSA Private Key") # Do not change this
+        # print(private_key_receiver_rsa) # Do not change this
+        # print("Sender's ECC Public Key") # Do not change this
+        # print(public_key_sender_ecc) # Do not change this
+        # print("Sender's ECC Private Key") # Do not change this
+        # print(private_key_sender_ecc) # Do not change this
 
         return symmetric_key, \
                 public_key_sender_rsa, private_key_sender_rsa, \
@@ -85,22 +85,22 @@ class ExecuteCrypto(object): # Do not change this
 
 
 
-        print("Nonce for AES-128-CBC") # Do not change this
-        print(nonce_aes_cbc) # Do not change this
-        print("Nonce for AES-128-CTR") # Do not change this
-        print(nonce_aes_ctr) # Do not change this
-        print("NOnce for RSA-2048") # Do not change this
-        print(nonce_encrypt_rsa) # Do not change this
-        print("Nonce for AES-128-CMAC") # Do not change this
-        print(nonce_aes_cmac) # Do not change this
-        print("Nonce for SHA3-256-HMAC") # Do not change this
-        print(nonce_hmac) # Do not change this
-        print("Nonce for RSA-2048-SHA3-256") # Do not change this
-        print(nonce_tag_rsa) # Do not change this
-        print("Nonce for ECDSA") # Do not change this
-        print(nonce_ecdsa) # Do not change this
-        print("Nonce for AES-128-GCM") # Do not change this
-        print(nonce_aes_gcm) # Do not change this
+        # print("Nonce for AES-128-CBC") # Do not change this
+        # print(nonce_aes_cbc) # Do not change this
+        # print("Nonce for AES-128-CTR") # Do not change this
+        # print(nonce_aes_ctr) # Do not change this
+        # print("NOnce for RSA-2048") # Do not change this
+        # print(nonce_encrypt_rsa) # Do not change this
+        # print("Nonce for AES-128-CMAC") # Do not change this
+        # print(nonce_aes_cmac) # Do not change this
+        # print("Nonce for SHA3-256-HMAC") # Do not change this
+        # print(nonce_hmac) # Do not change this
+        # print("Nonce for RSA-2048-SHA3-256") # Do not change this
+        # print(nonce_tag_rsa) # Do not change this
+        # print("Nonce for ECDSA") # Do not change this
+        # print(nonce_ecdsa) # Do not change this
+        # print("Nonce for AES-128-GCM") # Do not change this
+        # print(nonce_aes_gcm) # Do not change this
 
         return nonce_aes_cbc, nonce_aes_ctr, nonce_encrypt_rsa, nonce_aes_cmac, \
                 nonce_hmac, nonce_tag_rsa, nonce_ecdsa, nonce_aes_gcm # Do not change this
@@ -146,16 +146,16 @@ class ExecuteCrypto(object): # Do not change this
         # Write your script here
 
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Encryption Key") # Do not change this
-        print(key) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Ciphertext") # Do not change this
-        print(ciphertext) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Encryption Key") # Do not change this
+        # print(key) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Ciphertext") # Do not change this
+        # print(ciphertext) # Do not change this
 
         return ciphertext # Do not change this
 
@@ -194,16 +194,16 @@ class ExecuteCrypto(object): # Do not change this
 
         # Write your script here
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Decryption Key") # Do not change this
-        print(key) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Ciphertext") # Do not change this
-        print(ciphertext) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Decryption Key") # Do not change this
+        # print(key) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Ciphertext") # Do not change this
+        # print(ciphertext) # Do not change this
         return plaintext # Do not change this
 
     def generate_auth_tag(self, algo, key, plaintext, nonce): # Do not change this
@@ -225,7 +225,6 @@ class ExecuteCrypto(object): # Do not change this
 
         elif algo =='RSA-2048-SHA3-256-SIG-GEN': # Do not change this
             # Write your script here
-
             # here we need private key
             private_key = serialization.load_pem_private_key(key, password=None)
             auth_tag = private_key.sign(plaintext, padding.PSS(mgf=padding.MGF1(hashes.SHA3_256()),
@@ -243,16 +242,16 @@ class ExecuteCrypto(object): # Do not change this
         # Write your script here
 
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Authentication Key") # Do not change this
-        print(key) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Authentication Tag") # Do not change this
-        print(auth_tag) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Authentication Key") # Do not change this
+        # print(key) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Authentication Tag") # Do not change this
+        # print(auth_tag) # Do not change this
 
         return auth_tag # Do not change this
 
@@ -306,18 +305,18 @@ class ExecuteCrypto(object): # Do not change this
 
         # Write your script here
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Authentication Key") # Do not change this
-        print(key) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Authentication Tag") # Do not change this
-        print(auth_tag) # Do not change this
-        print("Authentication Tag Valid") # Do not change this
-        print(auth_tag_valid) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Authentication Key") # Do not change this
+        # print(key) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Authentication Tag") # Do not change this
+        # print(auth_tag) # Do not change this
+        # print("Authentication Tag Valid") # Do not change this
+        # print(auth_tag_valid) # Do not change this
 
         return auth_tag_valid # Do not change this
 
@@ -337,20 +336,20 @@ class ExecuteCrypto(object): # Do not change this
 
         # Write your script here
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Encryption Key") # Do not change this
-        print(key_encrypt) # Do not change this
-        print("Authentication Key") # Do not change this
-        print(key_generate_auth) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Ciphertext") # Do not change this
-        print(ciphertext) # Do not change this
-        print("Authentication Tag") # Do not change this
-        print(auth_tag) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Encryption Key") # Do not change this
+        # print(key_encrypt) # Do not change this
+        # print("Authentication Key") # Do not change this
+        # print(key_generate_auth) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Ciphertext") # Do not change this
+        # print(ciphertext) # Do not change this
+        # print("Authentication Tag") # Do not change this
+        # print(auth_tag) # Do not change this
 
         return ciphertext, auth_tag # Do not change this
 
@@ -374,22 +373,22 @@ class ExecuteCrypto(object): # Do not change this
 
         # Write your script here
 
-        print("Algorithm") # Do not change this
-        print(algo) # Do not change this
-        print("Decryption Key") # Do not change this
-        print(key_decrypt) # Do not change this
-        print("Authentication Key") # Do not change this
-        print(key_verify_auth) # Do not change this
-        print("Plaintext") # Do not change this
-        print(plaintext) # Do not change this
-        print("Nonce") # Do not change this
-        print(nonce) # Do not change this
-        print("Ciphertext") # Do not change this
-        print(ciphertext) # Do not change this
-        print("Authentication Tag") # Do not change this
-        print(auth_tag) # Do not change this
-        print("Authentication Tag Valid") # Do not change this
-        print(auth_tag_valid) # Do not change this
+        # print("Algorithm") # Do not change this
+        # print(algo) # Do not change this
+        # print("Decryption Key") # Do not change this
+        # print(key_decrypt) # Do not change this
+        # print("Authentication Key") # Do not change this
+        # print(key_verify_auth) # Do not change this
+        # print("Plaintext") # Do not change this
+        # print(plaintext) # Do not change this
+        # print("Nonce") # Do not change this
+        # print(nonce) # Do not change this
+        # print("Ciphertext") # Do not change this
+        # print(ciphertext) # Do not change this
+        # print("Authentication Tag") # Do not change this
+        # print(auth_tag) # Do not change this
+        # print("Authentication Tag Valid") # Do not change this
+        # print(auth_tag_valid) # Do not change this
 
         return plaintext, auth_tag_valid # Do not change this
 
