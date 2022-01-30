@@ -1,4 +1,4 @@
-from execute_crypto import ExecuteCrypto
+from submissions.execute_crypto import ExecuteCrypto
 import os
 import time
 
@@ -128,15 +128,15 @@ def run_authenticated_encryption(algo, plaintext):
     return key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3, ciphertext, auth_tag, auth_tag_valid
 
 # now we simply run the measurements and check whether they are running correctly
-file = open('original_plaintext.txt', 'r')
+file = open('submissions/original_plaintext.txt', 'r')
 plaintext = file.read()
 file.close()
 
 plaintext = bytes(plaintext,encoding='UTF-8')
 
-# key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3 = run_encryption(rsa_2048,plaintext)
+key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3 = run_encryption(rsa_2048,plaintext)
 # key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3 = run_authentication(ecdsa_auth,plaintext)
-key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3, _, _, _ = run_authenticated_encryption(aes_gcm,plaintext)
+# key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3, _, _, _ = run_authenticated_encryption(aes_gcm,plaintext)
 
 print(f"Encryption Time: {(t2-t1)*1000} ms \nDecryption Time: {(t3-t2)*1000} ms \nkey_length_sender: {key_length_sender*8}\n"
       f"key_length_receiver: {key_length_receiver*8}\npacket_length: {packet_length}\nplaintext: {output}")
