@@ -1,4 +1,4 @@
-from execute_crypto import ExecuteCrypto
+from submissions.execute_crypto import ExecuteCrypto
 import os
 import time
 
@@ -128,7 +128,7 @@ def run_authenticated_encryption(algo, plaintext):
     return key_length_sender, key_length_receiver, packet_length, output, t1, t2, t3, ciphertext, auth_tag, auth_tag_valid
 
 # now we simply run the measurements and check whether they are running correctly
-file = open('original_plaintext.txt', 'r')
+file = open('submissions/original_plaintext.txt', 'r')
 plaintext = file.read()
 file.close()
 
