@@ -342,8 +342,9 @@ class ExecuteCrypto(object): # Do not change this
         if algo == 'AES-128-GCM-GEN': # Do not change this
             # Write your script here
             aesgcm_object = AESGCM(key_encrypt)
-            auth_tag = os.urandom(16)
-            ciphertext = aesgcm_object.encrypt(nonce=nonce,data=plaintext,associated_data=auth_tag)
+            ciphertext = aesgcm_object.encrypt(nonce=nonce,data=plaintext,associated_data=None)
+            auth_tag = ciphertext[len(ciphertext)-16:]
+            ciphertext = ciphertext[:len(ciphertext)-16]
 
         else:
             raise Exception("Unexpected algorithm") # Do not change this
@@ -377,8 +378,9 @@ class ExecuteCrypto(object): # Do not change this
         if algo == 'AES-128-GCM-VRF': # Do not change this
             # Write your script here
             aesgcm_object = AESGCM(key_decrypt)
+            ciphertext += auth_tag
             try:
-                plaintext = aesgcm_object.decrypt(nonce=nonce,data=ciphertext,associated_data=auth_tag)
+                plaintext = aesgcm_object.decrypt(nonce=nonce,data=ciphertext,associated_data=None)
                 auth_tag_valid = True
             except cryptography.exceptions.InvalidTag:
                 plaintext = ""
